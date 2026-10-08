@@ -1,0 +1,27 @@
+[submodule "17"]
+	path = 17
+	url = https://github.com/SunshineCTF/SunshineCTF-2017-Public.git
+[submodule "18"]
+	path = 18
+	url = https://github.com/SunshineCTF/SunshineCTF-2018-Public.git
+[submodule "19"]
+	path = 19
+	url = https://github.com/SunshineCTF/SunshineCTF-2019-Public.git
+[submodule "20"]
+	path = 20
+	url = https://github.com/SunshineCTF/SunshineCTF-2020-Public.git
+[submodule "21"]
+	path = 21
+	url = https://github.com/SunshineCTF/SunshineCTF-2021-Public.git
+[submodule "22"]
+	path = 22
+	url = https://github.com/SunshineCTF/SunshineCTF-2022-Public.git
+[submodule "23"]
+	path = 23
+	url = https://github.com/SunshineCTF/SunshineCTF-2023-Public.git
+[submodule "24"]
+	path = 24
+	url = https://github.com/SunshineCTF/SunshineCTF-2024-Public.git
+[submodule "25"]
+	path = 25
+	url = https://github.com/SunshineCTF/SunshineCTF-2025-Public.git
