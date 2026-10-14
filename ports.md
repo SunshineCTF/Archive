@@ -99,9 +99,9 @@ Port convention: `yycnn` — `yy` = year, `c` = category
 | 2023 | Array of Sunshine | Pwn | `Pwn/array_of_sunshine` | ctf.hackucf.org | 23003 | `nc ctf.hackucf.org 23003` |
 | 2023 | Bugspray | Pwn | `Pwn/bugspray` | ctf.hackucf.org | 23004 | `nc ctf.hackucf.org 23004` |
 | 2023 | DDR | Scripting | `Scripting/ddr` | ctf.hackucf.org | 23200 | `nc ctf.hackucf.org 23200` |
-| 2023 | Simon Programmer 1 | Scripting | `Scripting/SimonProgrammer1` | ctf.hackucf.org | 23201 | http://ctf.hackucf.org:23201 |
-| 2023 | Simon Programmer 2 | Scripting | `Scripting/SimonProgrammer2` | ctf.hackucf.org | 23202 | http://ctf.hackucf.org:23202 |
-| 2023 | Simon Programmer 3 | Scripting | `Scripting/SimonProgrammer3` | ctf.hackucf.org | 23203 | http://ctf.hackucf.org:23203 |
+| 2023 | Simon Programmer 1 | Scripting | `Scripting/SimonProgrammer1` | simon-programmer-1.ctf.hackucf.org | 23201 | https://simon-programmer-1.ctf.hackucf.org |
+| 2023 | Simon Programmer 2 | Scripting | `Scripting/SimonProgrammer2` | simon-programmer-2.ctf.hackucf.org | 23202 | https://simon-programmer-2.ctf.hackucf.org |
+| 2023 | Simon Programmer 3 | Scripting | `Scripting/SimonProgrammer3` | simon-programmer-3.ctf.hackucf.org | 23203 | https://simon-programmer-3.ctf.hackucf.org |
 | 2023 | BeepBoop Blog | Web | `Web/beepboop_blog` | beepboop-blog.ctf.hackucf.org | 23300 | https://beepboop-blog.ctf.hackucf.org |
 | 2023 | Hotdog Stand | Web | `Web/hotdog_stand` | hotdog-stand.ctf.hackucf.org | 23301 | https://hotdog-stand.ctf.hackucf.org |
 | 2024 | FlagShop | Pwn | `Pwn/FlagShop` | ctf.hackucf.org | 24001 | `nc ctf.hackucf.org 24001` |
