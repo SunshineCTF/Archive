@@ -41,9 +41,15 @@ year's `Config.mk`). Each docker-compose service sets `mem_limit`, `cpus` and
 adding a service.
 
 TCP challenges publish `0.0.0.0:<port>`; web/compose challenges publish
-`127.0.0.1:<port>` and are fronted by the per-repo `nginx/<sub>.ctf.hackucf.org`
-fragments (drop them into `/etc/nginx/sites-enabled/`). Ports follow the `yycnn`
-convention; the combined list is in `ports.md`.
+`127.0.0.1:<port>` and are fronted by nginx, routed by `Host`. Each web
+challenge's route is declared in its `Build.mk` (`ctf_check_web` registers it
+from its host + port; a challenge without a check calls
+`$(call nginx_service,<host>,<port>)` directly), and `pwnmake publish` writes
+one `publish/nginx/<host>.http` line per host (`<host> <port>;`) for the
+proxy's `Host` → port map. Collect `publish/nginx/*.http` (and any `*.xff`)
+into the reverse proxy's include directory; there are no hand-kept nginx
+fragments in the year repos. Ports follow the `yycnn` convention; the combined
+list is in `ports.md`.
 
 > Hosting ALL compose challenges at once creates ~40 docker networks, which exceeds
 > docker's default address pool. On the archive server, widen it in
