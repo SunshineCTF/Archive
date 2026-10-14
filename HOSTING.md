@@ -103,9 +103,10 @@ description: |-
 The site's web server serves `/files/sun/<year>/<challenge folder>/<file>` from
 the published files, and the archive's CTFd theme shows the links as file
 attachments. Only the handful of challenges that already had files uploaded to
-ctf.hackucf.org's CTFd keep them under `files:`. Three handouts aren't in git at
-all (Old Favorites 1 and 2, Phishy Phishy): they have to be copied onto the web
-server by hand.
+ctf.hackucf.org's CTFd keep them under `files:`. Every other handout is in git:
+the large ones are kept under the challenge's `attachments/` (xz-compressed
+when that helps, split into parts under 50 MB) and the challenge's `Build.mk`
+reassembles them at publish time.
 
 For the web server, run `pwnmake publish` from the top of the site's checkout
 of all the challenge repos, so the paths match the `/files/` URLs. The validator

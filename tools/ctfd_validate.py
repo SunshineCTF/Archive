@@ -41,14 +41,6 @@ ROOT = Path.cwd()
 SKIP_PARTS = {"Pegasus", "publish", ".build", "node_modules", ".git"}
 YEARS = ["17", "18", "19", "20", "21", "22", "23", "24", "25"]
 
-# Handouts linked from descriptions that aren't in git: the old ctf.hackucf.org
-# served them, and they have to be copied onto the web server by hand.
-HANDOUTS_NOT_IN_GIT = {
-    "/files/sun/18/Forensics/OldFavorites/OldFavorites.mp4",
-    "/files/sun/18/Forensics/OldFavorites2/OldFavorites2.mp4",
-    "/files/sun/18/Forensics/phishy-phishy/phishy_chall.zip",
-}
-
 # Challenges whose handout is *supposed* to contain the full flag (e.g. a pcap
 # where finding the flag in the capture is the whole challenge).
 FLAG_IN_HANDOUT_OK = {
@@ -157,9 +149,7 @@ def handout_issues(f, d):
         if url != f"{url_base}/{name}":
             problems.append(f"handout link {url} should be {url_base}/{name}")
             continue
-        if url in HANDOUTS_NOT_IN_GIT:
-            warnings.append(f"handout {name} isn't in git; copy it onto the web server by hand")
-        elif not published:
+        if not published:
             warnings.append(f"can't check handout {name}: run `pwnmake publish` first")
         elif not (pub / name).is_file():
             problems.append(f"handout {name} isn't published; add it to PUBLISH in Build.mk")
