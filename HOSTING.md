@@ -56,6 +56,13 @@ list is in `ports.md`.
 > `/etc/docker/daemon.json`, e.g.
 > `{"default-address-pools":[{"base":"10.200.0.0/16","size":24}]}`.
 
+> Hosting everything also exhausts the kernel's default of 128 inotify
+> instances per user: container processes running as root count against the
+> host's root (mariner's k3s alone holds several), and once the limit is hit
+> even `systemctl reload nginx` fails with "Failed to allocate directory watch:
+> Too many open files". Raise it on the archive server:
+> `echo 'fs.inotify.max_user_instances = 1024' > /etc/sysctl.d/90-inotify.conf && sysctl --system`.
+
 ## Verify the challenges (ephemeral — build, start, solve, tear down)
 
 ```bash
